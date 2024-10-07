@@ -1,0 +1,677 @@
+
+User@DESKTOP-UMECQ31 MINGW64 ~
+$ mkdir Taller_git_bash
+
+User@DESKTOP-UMECQ31 MINGW64 ~
+$ cd Taller_git_bash
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git init Taller_git_bash
+Initialized empty Git repository in C:/Users/User/Taller_git_bash/Taller_git_bash/.git/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git config --global user.name "NathalieWil"
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git config --global user.email "nathalie.wilches@correounivalle.edu.co"
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=main
+core.editor="C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+user.name=NathalieWil
+user.email=nathalie.wilches@correounivalle.edu.co
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git checkout -b feature
+fatal: not a git repository (or any of the parent directories): .git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash
+$ git init
+Initialized empty Git repository in C:/Users/User/Taller_git_bash/.git/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git branch
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git branch
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git chekout main
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git chekout master
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git branch
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ touch index.html
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git add index.html
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git commit "Mi primer commit"
+error: pathspec 'Mi primer commit' did not match any file(s) known to git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git commit -m "Mi primer commit"
+[master (root-commit) 7af4a5c] Mi primer commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git branch
+* master
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ echo "Texto inicial" > archivo.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git add archivo.txt
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git commit -m "Commit inicial"
+[feature b4d4ddc] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ echo "Texto agregado en feature" >> archivo.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git commit -am "Segundo commit en feature"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 2cce49f] Segundo commit en feature
+ 1 file changed, 1 insertion(+)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git checkout master
+Switched to branch 'master'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git merge feature
+Updating 7af4a5c..2cce49f
+Fast-forward
+ archivo.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 archivo.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ ls -l
+total 1
+-rw-r--r-- 1 User 197121 42 oct.  6 20:59 archivo.txt
+-rw-r--r-- 1 User 197121  0 oct.  6 20:46 index.html
+drwxr-xr-x 1 User 197121  0 oct.  6 20:25 Taller_git_bash/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git log --oneline
+2cce49f (HEAD -> master, feature) Segundo commit en feature
+b4d4ddc Commit inicial
+7af4a5c Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git reset --hard 2cce49f
+HEAD is now at 2cce49f Segundo commit en feature
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git rebase feature
+Current branch master is up to date.
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ ls -l
+total 1
+-rw-r--r-- 1 User 197121 42 oct.  6 20:59 archivo.txt
+-rw-r--r-- 1 User 197121  0 oct.  6 20:46 index.html
+drwxr-xr-x 1 User 197121  0 oct.  6 20:25 Taller_git_bash/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (hotfix)
+$ git branch
+  feature
+* hotfix
+  master
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (hotfix)
+$ echo "Corrección urgente" >> archivo.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (hotfix)
+$ git commit -am "Hotfix"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[hotfix 6d2366a] Hotfix
+ 1 file changed, 1 insertion(+)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (hotfix)
+$ git log --oneline
+6d2366a (HEAD -> hotfix) Hotfix
+2cce49f (master, feature) Segundo commit en feature
+b4d4ddc Commit inicial
+7af4a5c Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (hotfix)
+$ git checkout master
+Switched to branch 'master'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git cherry-pick hotfix
+[master 646b1b6] Hotfix
+ Date: Sun Oct 6 21:13:15 2024 -0500
+ 1 file changed, 1 insertion(+)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git reset --hard
+HEAD is now at 646b1b6 Hotfix
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ ls -l
+total 1
+-rw-r--r-- 1 User 197121 63 oct.  6 21:18 archivo.txt
+-rw-r--r-- 1 User 197121  0 oct.  6 20:46 index.html
+drwxr-xr-x 1 User 197121  0 oct.  6 20:25 Taller_git_bash/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git reflog
+646b1b6 (HEAD -> master) HEAD@{0}: reset: moving to HEAD
+646b1b6 (HEAD -> master) HEAD@{1}: cherry-pick: Hotfix
+2cce49f (feature) HEAD@{2}: checkout: moving from hotfix to master
+6d2366a (hotfix) HEAD@{3}: commit: Hotfix
+2cce49f (feature) HEAD@{4}: checkout: moving from master to hotfix
+2cce49f (feature) HEAD@{5}: reset: moving to 2cce49f
+2cce49f (feature) HEAD@{6}: merge feature: Fast-forward
+7af4a5c HEAD@{7}: checkout: moving from feature to master
+2cce49f (feature) HEAD@{8}: commit: Segundo commit en feature
+b4d4ddc HEAD@{9}: commit: Commit inicial
+7af4a5c HEAD@{10}: checkout: moving from master to feature
+7af4a5c HEAD@{11}: commit (initial): Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git reset --hard 646b1b6
+HEAD is now at 646b1b6 Hotfix
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git reflog
+646b1b6 (HEAD -> master) HEAD@{0}: reset: moving to 646b1b6
+646b1b6 (HEAD -> master) HEAD@{1}: reset: moving to HEAD
+646b1b6 (HEAD -> master) HEAD@{2}: cherry-pick: Hotfix
+2cce49f (feature) HEAD@{3}: checkout: moving from hotfix to master
+6d2366a (hotfix) HEAD@{4}: commit: Hotfix
+2cce49f (feature) HEAD@{5}: checkout: moving from master to hotfix
+2cce49f (feature) HEAD@{6}: reset: moving to 2cce49f
+2cce49f (feature) HEAD@{7}: merge feature: Fast-forward
+7af4a5c HEAD@{8}: checkout: moving from feature to master
+2cce49f (feature) HEAD@{9}: commit: Segundo commit en feature
+b4d4ddc HEAD@{10}: commit: Commit inicial
+7af4a5c HEAD@{11}: checkout: moving from master to feature
+7af4a5c HEAD@{12}: commit (initial): Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ echo "Cambio en feature" > conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git commit -am "Cambio en feature"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+        conflicto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git log --oneline
+2cce49f (HEAD -> feature) Segundo commit en feature
+b4d4ddc Commit inicial
+7af4a5c Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git commit -m "Cambio en feature"
+[feature d8e4c5a] Cambio en feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git log --oeline
+fatal: unrecognized argument: --oeline
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git log --oneline
+d8e4c5a (HEAD -> feature) Cambio en feature
+2cce49f Segundo commit en feature
+b4d4ddc Commit inicial
+7af4a5c Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (feature)
+$ git checkout master
+Switched to branch 'master'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ echo "Cambio en master" > conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git commit -m "Cambio en master"
+[master 8b4e8a3] Cambio en master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git log
+commit 8b4e8a3cd51a7a308b21368d32c6b26503a70f61 (HEAD -> master)
+Author: NathalieWil <nathalie.wilches@correounivalle.edu.co>
+Date:   Sun Oct 6 21:55:22 2024 -0500
+
+    Cambio en master
+
+commit 646b1b689d4543d5d9569f9b2ec89bc3cc97e6cf
+Author: NathalieWil <nathalie.wilches@correounivalle.edu.co>
+Date:   Sun Oct 6 21:13:15 2024 -0500
+
+    Hotfix
+
+commit 2cce49fb8ed8c0eb68aa68ad6a8d553802f2f152
+Author: NathalieWil <nathalie.wilches@correounivalle.edu.co>
+Date:   Sun Oct 6 20:56:57 2024 -0500
+
+    Segundo commit en feature
+
+commit b4d4ddc446fcce5d82bea25c55fc69bb3cbcb818
+Author: NathalieWil <nathalie.wilches@correounivalle.edu.co>
+Date:   Sun Oct 6 20:53:54 2024 -0500
+
+    Commit inicial
+
+commit 7af4a5caed9b4d56bb01d6099a333b7bd7c01905
+Author: NathalieWil <nathalie.wilches@correounivalle.edu.co>
+Date:   Sun Oct 6 20:48:22 2024 -0500
+
+    Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git log --oneline
+8b4e8a3 (HEAD -> master) Cambio en master
+646b1b6 Hotfix
+2cce49f Segundo commit en feature
+b4d4ddc Commit inicial
+7af4a5c Mi primer commit
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git merge feature
+Auto-merging conflicto.txt
+CONFLICT (add/add): Merge conflict in conflicto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git revert -m 1 8b4e8a3
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git remote add origin https://github.com/NathalieWil/Taller_git.git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git push -u origin master
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (15/15), 1.31 KiB | 223.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/NathalieWil/Taller_git/pull/new/master
+remote:
+To https://github.com/NathalieWil/Taller_git.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      conflicto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git add .
+error: 'Taller_git_bash/' does not have a commit checked out
+fatal: adding files failed
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git commit -m "Añadiendo archivos"
+U       conflicto.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      conflicto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git add conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master|MERGING)
+$ git commit -m "Resolviendo conflictos en conflicto.txt"
+[master 43aa179] Resolviendo conflictos en conflicto.txt
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 719 bytes | 55.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/NathalieWil/Taller_git.git
+   8b4e8a3..43aa179  master -> master
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ CD..
+bash: CD..: command not found
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ cd..
+bash: cd..: command not found
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Taller_git_bash/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git add Taller_git_bash
+error: 'Taller_git_bash/' does not have a commit checked out
+fatal: adding files failed
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git fetch origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 905 bytes | 14.00 KiB/s, done.
+From https://github.com/NathalieWil/Taller_git
+ * [new branch]      main       -> origin/main
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git checkout .b main origin/main
+error: pathspec '.b' did not match any file(s) known to git
+error: pathspec 'main' did not match any file(s) known to git
+error: pathspec 'origin/main' did not match any file(s) known to git
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git merge master --allow--unrelated-histories
+error: unknown option `allow--unrelated-histories'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --[no-]stat           show a diffstat at the end of the merge
+    --[no-]summary        (synonym to --stat)
+    --[no-]log[=<n>]      add (at most <n>) entries from shortlog to merge commit message
+    --[no-]squash         create a single commit instead of doing a merge    --[no-]commit         perform a commit if the merge succeeds (default)
+    -e, --[no-]edit       edit message before committing
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]ff             allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --[no-]verify-signatures
+                          verify that the named commit has a valid GPG signature
+    -s, --[no-]strategy <strategy>
+                          merge strategy to use
+    -X, --[no-]strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --[no-]message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --[no-]into-name <name>
+                          use <name> instead of the real target
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]abort          abort the current in-progress merge
+    --[no-]quit           --abort but leave index and working tree alone
+    --[no-]continue       continue the current in-progress merge
+    --[no-]allow-unrelated-histories
+                          allow merging unrelated histories
+    --[no-]progress       force progress reporting
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+    --[no-]autostash      automatically stash/stash pop before and after
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]signoff        add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git --abort
+unknown option: --abort
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (master)
+$ git checkout -b main origin/main
+branch 'main' set up to track 'origin/main'.
+Switched to a new branch 'main'
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ git merge master --allow--unrelated-histories
+error: unknown option `allow--unrelated-histories'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --[no-]stat           show a diffstat at the end of the merge
+    --[no-]summary        (synonym to --stat)
+    --[no-]log[=<n>]      add (at most <n>) entries from shortlog to merge commit message
+    --[no-]squash         create a single commit instead of doing a merge
+    --[no-]commit         perform a commit if the merge succeeds (default)
+    -e, --[no-]edit       edit message before committing
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]ff             allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --[no-]verify-signatures
+                          verify that the named commit has a valid GPG signature
+    -s, --[no-]strategy <strategy>
+                          merge strategy to use
+    -X, --[no-]strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --[no-]message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --[no-]into-name <name>
+                          use <name> instead of the real target
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]abort          abort the current in-progress merge
+    --[no-]quit           --abort but leave index and working tree alone
+    --[no-]continue       continue the current in-progress merge
+    --[no-]allow-unrelated-histories
+                          allow merging unrelated histories
+    --[no-]progress       force progress reporting
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+    --[no-]autostash      automatically stash/stash pop before and after
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]signoff        add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ git merge master --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+ archivo.txt   | 3 +++
+ conflicto.txt | 4 ++++
+ index.html    | 0
+ 3 files changed, 7 insertions(+)
+ create mode 100644 archivo.txt
+ create mode 100644 conflicto.txt
+ create mode 100644 index.html
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 329 bytes | 82.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NathalieWil/Taller_git.git
+   50a02e0..fb2b848  main -> main
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ ls -l
+total 3
+-rw-r--r-- 1 User 197121 63 oct.  7 00:05 archivo.txt
+-rw-r--r-- 1 User 197121 41 oct.  7 00:05 conflicto.txt
+-rw-r--r-- 1 User 197121  0 oct.  7 00:05 index.html
+-rw-r--r-- 1 User 197121 51 oct.  7 00:00 README.md
+drwxr-xr-x 1 User 197121  0 oct.  6 20:25 Taller_git_bash/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ git pull origin main
+From https://github.com/NathalieWil/Taller_git
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$ ls -l
+total 3
+-rw-r--r-- 1 User 197121 63 oct.  7 00:05 archivo.txt
+-rw-r--r-- 1 User 197121 41 oct.  7 00:05 conflicto.txt
+-rw-r--r-- 1 User 197121  0 oct.  7 00:05 index.html
+-rw-r--r-- 1 User 197121 51 oct.  7 00:00 README.md
+drwxr-xr-x 1 User 197121  0 oct.  6 20:25 Taller_git_bash/
+
+User@DESKTOP-UMECQ31 MINGW64 ~/Taller_git_bash (main)
+$
